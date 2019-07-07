@@ -1,0 +1,1147 @@
+/*================================CUSTOMIZED==================================*/
+.pagination {
+	text-align:center;
+}
+.pagination a {
+	color:#1CA843;
+	font-weight:bold;
+}
+.pagination a:hover {
+	color:#1CA843;
+	text-decoration:underline;
+}
+.map {
+	margin:30px;
+	width:400px;
+	height:300px;
+}
+
+#add {
+	width:100%;
+	margin-top:15px;
+}
+
+#addbook, #edittable, #addborrower, #editborrower {
+	margin-left:10%;
+}
+
+#addbook tr td, #edittable tr td, #addborrower tr td, #editborrower tr td {
+	padding:10px;
+}
+
+#bookdisplay table tr {
+	height:30px;
+	line-height:30px;
+}
+
+.viewlinks {
+	float:right;
+	margin-top:8px;
+	margin-left:5px;
+}
+
+#borrowertable {
+	font-size:0.9em;
+}
+
+.chkforms {
+	margin-left:40%;
+}
+#button, .button, #checkresbutton, #findbookbutton, #bookidbutton, #addbutton, #addclassification, #addauthor, #addpublisher, #editclassification, #editauthor, #editpublisher, #searchclassification, #searchauthor, #searchpublisher, #archivedsearchclassification, #archivedsearchauthor, #archivedsearchpublisher  {
+	background-color:#1C8A43;
+	border:#1C8A43;
+}
+ #button:hover, .button:hover,  #checkresbutton:hover, #findbookbutton:hover, #addbutton:hover, #addclassification:hover, #addauthor:hover, #addpublisher:hover, #editclassification:hover, #editauthor:hover, #editpublishe:hover, #searchclassification:hover, #searchauthor:hover, #searchpublisher:hover, #archivedsearchclassification:hover, #archivedsearchauthor:hover, #archivedsearchpublisher:hover  {
+ 	background-color:#419641;
+ }
+.glyphicon {
+	position:relative;
+	z-index:1;
+}
+select, input {
+	font-size:1em;
+	font-family:'Ubuntu', sans-serif;
+}
+
+.reservebutton, .returnbutton, .borrowbutton, .cancelresbutton {
+	color:white;
+	background-color:#1C8A43;
+	border:#1C8A43;
+	padding: 5px 10px;
+  	font-size: 12px;
+  	line-height: 1.5;
+  	border-radius: 3px;
+}
+.reservebutton:hover, .reservebutton:focus, .returnbutton:hover, .returnbutton:focus, .borrowbutton:hover, .borrowbutton:focus, .cancelresbutton:hover, .cancelresbutton:focus {
+	background-color:#419641;
+	color:white;
+	text-decoration:none;
+}
+.cancelbutton {
+	color:#1C8A43;
+	padding: 5px 10px;
+	background-color:white;
+	border:0;
+}
+
+.cancelbutton:hover, .cancelbutton:focus {
+	background-color:#1C8A43;
+	color:white;
+	text-decoration:none;
+}
+.authortxt {
+	width:200px;
+	display:inline;
+}
+#borrowalert, #returnalert {
+	background-color:#E5FAD1;
+	color:#1C8A43;
+	text-align:center;
+	margin-top:20px;
+}
+
+#borrowalert a, #returnalert a {
+	color:#1C8A43;
+	text-decoration:underline;
+}
+
+#printbutton {
+	background-color:#25b458;
+}
+#printpdf {
+	margin:10px 0px;
+}
+.booktblfilter {
+	margin:10px 0px;
+}
+#bookgroupby {
+	margin-right:10px;
+}
+
+#paymentsubmit {
+	margin-top:10px;
+}
+/*================================BODY========================================*/
+html {
+	font-size:100%;
+	height:100%;
+}
+body {
+	margin:0;
+	padding:0;
+	font-size:1em;
+	color:black;
+	font-family:'Open Sans', sans-serif;
+	height:100%;
+	position:relative;
+}
+
+#container {
+	height:100%;
+	position:relative;
+}
+
+.admincontainer {
+	margin-left:14%;
+	margin-top:10px;
+}
+
+
+/*==================================HEADER====================================*/
+#gvcnavbar {
+	/*height:81px;*/
+	background-color:#1C8A43;
+	margin:0;
+	padding:0;
+    border:0;
+    position:fixed;
+    top:0;
+    width:100%;
+}
+
+#gvclogo {
+	height:30px;
+	width:30px;
+	margin-right:3px;
+}
+
+#gvcnavbar .navbar-brand {
+	color:white;
+}
+
+#gvcnavbar .navbar-brand:hover {
+	opacity:0.9;
+}
+
+#navbarright {
+	margin-right:30px;
+}
+
+#navbarright li {
+	/* transition:all 0.5s ease-in-out; */
+}
+
+#navbarright li a {
+	color:white;
+	line-height:30px;
+}
+
+#navbarright li a:hover {
+	background-color:#444;
+}
+
+.dropdown-items {
+    list-style-type: none;
+    padding: 0;
+    background-color: #444;
+    position: absolute;
+    z-index: 4;
+	right: 35px;
+	padding:10px 0;
+}
+
+.dropdown-items li:hover {
+	background-color:#1C8A43;
+}
+
+.dropdown-items li a {
+	color:#ffffff;
+	padding:15px;
+}
+
+.dropdown-items li a:hover {
+	text-decoration:none;
+}
+
+#navbarright .dropdown-menu {
+	background-color:#444;
+}
+
+#navbarright .dropdown-menu li a {
+	line-height:30px;
+}
+
+#navbarright .dropdown-menu li a:hover {
+	background-color:#1C8A43;
+}
+
+#navbarright .open a, #navbarright .open a:active {
+	background-color:#444;
+}
+
+#gvcnavbarcollapse {
+	background-color:#1C8A43;
+}
+
+#gvcnavbar .navbar-header .navbar-toggle .icon-bar {
+	background-color:white;
+}
+/*==============================SLIDER==================================*/
+#homepageslider {
+	margin:10px 0px;
+}
+#homepageslider .carousel-inner .item img {
+	height:450px;
+	width:100%;
+}
+
+#homepageslider .carousel-control.left, .carousel-control.right {
+	background:none;
+}
+
+/*==================================SIDEBAR====================================*/
+#sidebar {
+	/*border:solid black 1px;*/
+	margin-top:0px;
+	padding:0;
+	float:left;
+	width:25%;
+}
+
+#sidebar ul {
+	height:220px;
+	margin:0;
+	padding-left:0;
+}
+#sidebar ul a li {
+	list-style-type:none;
+	height:45px;
+	line-height:45px;
+	border-bottom:solid green 1px;
+}
+#sidebar ul a li {
+	text-decoration:none;
+	font-family:'Ubuntu', sans-serif;
+	color:black;
+
+}
+
+#sidebar ul a li:hover {
+	color:white;
+	background-color:#1C8A43;
+}
+
+#sidebar ul a:hover {
+	text-decoration:none;
+}
+
+
+.adminsidebar {
+	background-color:#444;
+	height:100%;
+	width:14%;
+    position:fixed;
+    top:60px;
+	font-size:0.9em;
+}
+
+.adminsidebar ul {
+	line-height:30px;
+	list-style-type:none;
+	padding:0;
+}
+
+.adminsidebar ul li {
+	padding:5px;
+	width:100%;
+
+}
+
+.adminsidebar ul li a {
+	color:white;
+}
+
+.adminsidebar ul li:hover {
+	background-color:#1C8A43;
+}
+
+.adminsidebar ul li a:hover {
+	text-decoration:none;
+}
+
+.caret {
+    cursor:pointer;
+}
+
+.adminwrapper {
+	margin-left:14%;
+}
+
+#info {
+	position:relative;
+	margin-left:14%;
+}
+
+#submenubook, #submenuborrower,#archives {
+	margin-left:15px;
+}
+/*================================DASHBOARD=================================*/
+#dashboard {
+	background-color:#444;
+	padding:0;
+	float:left;
+}
+#dashboard p {
+	color:white;
+	padding:5px 10px;
+}
+#dashboard ul {
+	height:100%;
+	width:210px;
+	margin-left:0;
+	-webkit-padding-start:0px;
+	padding:0;
+}
+
+#dashboard ul a li {
+	list-style-type:none;
+	padding:10px;
+	color:white;
+}
+
+#dashboard ul a li:hover {
+	background-color:#1C8A43;
+}
+
+#dashboard ul a:hover {
+	text-decoration:none;
+}
+
+.dashboardwell, .archivewell {
+	width:240px;
+	height:180px;
+	float:left;
+	margin:10px;
+	color:white;
+	text-align:center;
+	font-size:1.3em;
+	opacity:1;
+	padding-top:0px;
+}
+
+.archivewell {
+	background-color:#c3ed9c;
+	color:black;
+	height:220px;
+}
+
+.quantity, .archivequantity {
+	padding-top:3px;
+	margin-left:59.5%;
+	background-color:#E61F05;
+	width:50%;
+	height:35px;
+	border-bottom-left-radius:50px;
+}
+
+.archivequantity {
+	background-color:#5bc0de;
+	color:white;
+}
+
+.quantity2 {
+	background-color:#1C8A43;
+	width:23px;
+	height:23px;
+	border-radius:50%;
+	display:inline-block;
+	text-align:center;
+}
+.wellicon {
+	width:108px;
+	height:108px;
+}
+
+#borrowersicon {
+	width:150px;
+	height:108px;
+}
+
+#info .well:hover, .archives .well:hover {
+	opacity:0.9;
+}
+
+#info .well:nth-child(6):hover {
+	opacity:1;
+}
+
+#well1 {
+	background-color:#337ab7;
+}
+
+#well2 {
+	background-color:#5cb85c;
+}
+#well3 {
+	background-color:#5bc0de;
+}
+
+#well4 {
+	background-color:#f0ad4e;
+}
+
+#well5 {
+	background-color:#255625;
+}
+
+#well6 {
+	background-color:#1C8A43;
+}
+
+/*==================================MAIN====================================*/
+.wrapper {
+	margin-left:2%;
+    margin-right:2%;
+    position:relative;
+    top:60px;
+}
+
+/*SEARCH FORMS*/
+
+.basicsearch {
+	background-color:#E8E6E6;
+	margin:10px 0;
+	padding:35px 50px;
+}
+
+#basicsearchbox {
+	width:400px;
+	display:inline-block;
+}
+
+.searchtype  {
+	width:400px;
+}
+
+.collectionsearch {
+	background-color:#E8E6E6;
+	height:220px;
+	padding-left:50px;
+	padding-top:20px;
+}
+
+#bookscollection {
+	margin-top:20px;
+	margin-bottom:20px;
+	font-size:0.9em;
+	font-family:'Open sans', sans-serif;
+}
+
+#bookscollection table tr td {
+	color:black;
+	font-size:0.9em;
+	vertical-align:baseline;
+}
+#bookscollection table tr th {
+	background-color:#1C8A43;
+	text-align:left;
+	font-weight:normal;
+	color:white;
+}
+
+
+.advancedsearch {
+	background-color:#E8E6E6;
+	margin-left:27%;
+	margin-top:20px;
+	padding-left:50px;
+	padding-top:10px;
+	padding-bottom:30px;
+	padding-right:0px;
+}
+.advancedsearch .form-group {
+	padding:5px;
+}
+input[class=searchbox] {
+	width:300px;
+}
+input[id=advancedsearchbutton] {
+	margin-left:70%;
+	background-color:#1C8A43;
+}
+input[id=resetbutton] {
+	background-color:#1C8A43;
+}
+.searchresults table {
+	margin-top:20px;
+	margin-bottom:20px;
+}
+.searchresults table tr td {
+	color:black;
+	font-size:0.9em;
+	vertical-align:baseline;
+}
+.searchresults th {
+	font-size:1em;
+	color:white;
+	font-family:'Open Sans', sans-serif;
+	text-align:left;
+	font-weight:normal;
+}
+.searchresults th {
+	background-color:#1C8A43;
+}
+.resultsbar {
+	margin-top:20px;
+	background-color:#E5FAD1;
+	height:35px;
+	padding:5px;
+}
+.resultsbar p {
+	color:#1C8A43;
+	font-family:'Ubuntu', sans-serif;
+}
+/*MODAL FORMS*/
+#login .modal-header, #login .modal-body {
+	background-color:#E5FAD1;
+}
+#login .modal-body #button {
+	margin-left:80%;
+}
+
+#login .modal-dialog {
+	width:450px;
+}
+
+#empty .modal-dialog {
+	width:240px;
+	height:320px;
+}
+.alertmodal {
+	width:300px;
+	height:320px;
+	font-size:0.9em;
+}
+#changepassword .modal-dialog {
+	width:350px;
+	height:auto;
+}
+
+#changepassword .modal-header, #changepassword .modal-body, #changepassword .modal-footer {
+	background-color:#E5FAD1;
+}
+
+#editprofile .modal-header, #editprofile .modal-body, #editprofile .modal-footer {
+	background-color:#E5FAD1;
+}
+
+#editprofile .modal-dialog {
+	width:350px;
+	height:auto;
+}
+
+#barcodemodal .modal-dialog {
+	width:300px;
+	height:auto;
+}
+
+
+/*ADMIN AND BORROWER PROFILE AND MENU*/
+.profilemenu {
+	background-color:#E5FAD1;
+	height:300px;
+	padding:10px 10px;
+}
+
+.profilemenu p a {
+	text-decoration:none;
+	color:#1C8A43;
+	font-weight:bold;
+	font-size:1.5em;
+	font-family:'Ubuntu', sans-serif;
+}
+.profilemenu p a:hover {
+	text-decoration:underline;
+}
+
+/*AED FORMS*/
+/*#add {
+	/*background-color:#E8E6E6;
+	padding-right:200px;
+	padding-left:30px;
+	padding-top:10px;
+	padding-bottom:20px;
+	margin:5px 0px;
+}
+#add td {
+	padding:10px;
+}
+#add td div {
+	padding:10px 0px;
+}
+#add td .chosen-select {
+	padding:5px 0px;
+}*/
+.authortxtbox {
+	display:inline;
+}
+
+.removeatxt {
+	margin-left:4px;
+}
+#edit {
+	margin-top:20px;
+}
+
+.borrowerdisplay {
+	margin-top:5px;
+}
+.borrowerdisplay table {
+	margin:0;
+	padding:0;
+
+}
+
+.borrowerdisplay td, .borrowerdisplay th {
+	font-size:0.9em;
+	color:#1C8A43;
+	font-family:'Open Sans', sans-serif;
+}
+.borrowerdisplay td {
+	color:black;
+}
+.borrowerdisplay th {
+	background-color:#1C8A43;
+	color:white;
+	font-weight:normal;
+	text-align:center;
+	border:0;
+}
+.inactivestatusbutton {
+	background-color:#d9534f;
+	border-color:#d9534f;
+}
+#bookdisplay {
+	margin-top:5px;
+}
+#bookdisplay table {
+	margin:0;
+	padding:0;
+
+}
+
+#bookdisplay td, #bookdisplay th {
+	font-size:0.9em;
+	color:#1C8A43;
+	font-family:'Open Sans', sans-serif;
+}
+#bookdisplay td {
+	color:black;
+}
+#bookdisplay th {
+	background-color:#1C8A43;
+	color:white;
+	font-weight:normal;
+	text-align:center;
+}
+
+input[class=formsbutton] {
+	color:white;
+	background-color:#1C8A43;
+	padding-left:25px;
+	padding-right:25px;
+	margin-top:30px;
+}
+/*input[class=aedsearchbox] {
+	height: 20px;
+	line-height: 20px;
+}*/
+input[id=aedsearchbutton] {
+	background-color:#1C8A43;
+	color:white;
+}
+
+#aedsearchform, #archivedsearchform {
+	margin-top:20px;
+	height:220px;
+}
+
+.archivedsearchform {
+	/*border:solid black 1px;*/
+	margin:10px 0px;
+	padding:10px;
+	background-color:#E8E6E6;
+}
+.booklogssearchform {
+	/*border:solid black 1px;*/
+	margin:10px 0px;
+	height:200px;
+}
+.booklogssearchform form table tr td {
+	padding:5px;
+}
+.reservationssearchform {
+	/*border:solid black 1px;*/
+	margin:10px 0px;
+	height:200px;
+}
+.reservationssearchform form table tr td {
+	padding:5px;
+}
+.borrowedbookssearchform {
+	/*border:solid black 1px;*/
+	margin:10px 0px;
+	height:200px;
+}
+.borrowedbookssearchform form table tr td {
+	padding:5px;
+}
+
+.borrowerlogssearchform {
+	/*border:solid black 1px;*/
+	margin:10px 0px;
+	height:200px;
+}
+.borrowerlogssearchform form table tr td {
+	padding:5px;
+}
+#selectabook {
+	float:left;
+	padding-bottom:30px;
+}
+/*RESERVATION AND booklog AND LOGS TABLES*/
+.reservations {
+	/*padding-bottom:50px;*/
+	margin-top:20px;
+}
+.reservations td, .reservations th {
+	font-size:0.9em;
+	font-family:'Open Sans', sans-serif;
+	text-align:left;
+}
+.reservations table tr td {
+	color:black;
+}
+.reservations table tr th {
+	background-color:#1C8A43;
+	color:white;
+	font-weight:normal;
+}
+.booklogs {
+	padding-bottom:50px;
+}
+.booklogs td, .booklogs th {
+	font-size:0.9em;
+	font-family:'Open Sans', sans-serif;
+	text-align:left;
+}
+.booklogs table tr td {
+	color:black;
+}
+.booklogs table tr th {
+	background-color:#1C8A43;
+	color:white;
+	font-weight:normal;
+}
+.logs {
+	padding-bottom:50px;
+}
+.logs td, .logs th {
+	font-size:0.9em;
+	font-family:'Open Sans', sans-serif;
+	text-align:left;
+}
+.logs table tr td {
+	color:black;
+}
+.logs table tr th {
+	background-color:#1C8A43;
+	color:white;
+	font-weight:normal;
+}
+.classifications {
+	padding-bottom:50px;
+}
+.classifications td, .classifications th {
+	font-size:0.9em;
+	font-family:'Open Sans', sans-serif;
+	text-align:left;
+}
+.classifications table tr td {
+	color:black;
+}
+.classifications table tr th {
+	background-color:#1C8A43;
+	color:white;
+	font-weight:normal;
+}
+.classificationform {
+	margin-bottom:20px;
+}
+.authors {
+	padding-bottom:50px;
+}
+.authors td, .authors th {
+	font-size:0.9em;
+	font-family:'Open Sans', sans-serif;
+	text-align:left;
+}
+.authors table tr td {
+	color:black;
+}
+.authors table tr th {
+	background-color:#1C8A43;
+	color:white;
+	font-weight:normal;
+}
+.authorform {
+	margin-bottom:20px;
+}
+.publishers {
+	padding-bottom:50px;
+}
+.publishers td, .publishers  th {
+	font-size:0.9em;
+	font-family:'Open Sans', sans-serif;
+	text-align:left;
+}
+.publishers  table tr td {
+	color:black;
+}
+.publishers  table tr th {
+	background-color:#1C8A43;
+	color:white;
+	font-weight:normal;
+}
+.publisherform {
+	margin-bottom:20px;
+}
+
+#booktable td, #booktable th {
+	font-size:0.8em;
+	font-family:'Open Sans', sans-serif;
+	text-align:left;
+}
+#booktable tr td {
+	color:black;
+}
+#booktable th {
+	background-color:#1C8A43;
+	color:white;
+	font-weight:normal;
+}
+#returntable {
+	margin-top:20px;
+}
+#returntable td, #returntable th {
+	font-size:0.8em;
+	font-family:'Open Sans', sans-serif;
+	text-align:left;
+}
+#returntable tr td {
+	color:black;
+}
+#returntable tr th {
+	background-color:#1C8A43;
+	color:white;
+	font-weight:normal;
+}
+
+#booksearchresults {
+	margin-top:20px;
+}
+#booksearchresults  td, #booksearchresults  th {
+	font-size:0.9em;
+	font-family:'Open Sans', sans-serif;
+	text-align:left;
+}
+#booksearchresults  table tr td {
+	color:black;
+}
+#booksearchresults  table tr th {
+	background-color:#1C8A43;
+	color:white;
+	font-weight:normal;
+}
+.borrowedbooks {
+	padding-bottom:50px;
+	margin-top:20px;
+}
+.borrowedbooks td, .borrowedbooks th {
+	font-size:0.9em;
+	font-family:'Open Sans', sans-serif;
+	text-align:left;
+}
+.borrowedbooks table tr td {
+	color:black;
+}
+.borrowedbooks table tr th {
+	background-color:#1C8A43;
+	color:white;
+	font-weight:normal;
+}
+
+#showreservations {
+	margin-top:20px;
+}
+#showreservations td, #showreservations th {
+	font-size:0.9em;
+	font-family:'Open Sans', sans-serif;
+	text-align:left;
+}
+#showreservations tr td {
+	color:black;
+}
+#showreservations tr th {
+	background-color:#1C8A43;
+	color:white;
+	font-weight:normal;
+}
+
+.barcode {
+	margin-top:20px;
+}
+#barcode {
+	float:left;
+	text-align:center;
+	width:200px;
+	height:150px;
+	font-size:0.8em;
+}
+
+.barcodebtn {
+	clear: both;
+}
+.printbarcode {
+	margin-top:20px;
+	width:100%;
+}
+#printbarcode {
+	text-align:center;
+	width:200px;
+	height:185px;
+	font-size:0.8em;
+	border:solid black 1px;
+	clear:both;
+}
+/*==================================FOOTER====================================*/
+.footer {
+	clear: both;
+    position: relative;
+    z-index: 10;
+    margin-top: 50px;
+    background-color:#1C8A43;
+    height:145px;
+    width:100%;
+}
+
+/*=============================BORROW==================================*/
+#borrowerinfo, #inputdata, #showreservations, #borrowcart {
+	margin:20px 20px 0px 0px;
+}
+
+/*=============================MAINTENANCE==========================*/
+.classificationsearch, .authorsearch, .publishersearch {
+	margin-left:68%;
+	margin-bottom:10px;
+	margin-top:20px;
+}
+/*===========================REPORTS AND RECEIPTS===============================*/
+#gvclogopdf {
+	width:75px;
+	height:75px;
+	margin-right:10px;
+	margin-left: -5%;
+	padding:0;
+	display:inline;
+	vertical-align:middle;
+}
+#header {
+	text-align: center;
+}
+#header h2 {
+	display:inline;
+	vertical-align:middle;
+}
+#header h3,p {
+	clear:both;
+}
+
+#header h2, h3, p {
+	font-family:'Open Sans',sans-serif;
+	margin:0;
+	padding:0;
+}
+.datapdf {
+	clear:both;
+}
+
+.datapdf table {
+	margin-top:20px;
+}
+
+.datapdf td, .datapdf th {
+	font-family:'Open Sans', sans-serif;
+	border:solid black 1px;
+	padding:10px;
+	text-align:center;
+}
+
+.datapdf th {
+	font-size:0.8em;
+}
+
+.datapdf td {
+	font-size:0.7em;
+}
+
+#receiptheader, #receiptbody {
+	font-size:0.5em;
+}
+#receiptheader {
+	text-align:center;
+}
+#receipttitle {
+	display:inline;
+	vertical-align:middle;
+}
+#receiptlogo {
+	width:33px;
+	height:33px;
+	display:inline;
+	vertical-align:middle;
+}
+
+#booklist {
+	border-top:1px dashed black;
+	border-bottom:1px dashed black;
+	height:100px;
+}
+/*============================OTHER PAGES=====================*/
+.newcollections, .top10 {
+	text-align:center;
+	margin-top:20px;
+}
+
+#newcollectionstable, #top10table {
+	margin-top:20px;
+}
+
+#newcollectionstable tr:nth-child(odd), #top10table tr:nth-child(odd) {
+	background-color:#E5FAD1;
+}
+
+#newcollectionstable tr:nth-child(1), #top10table tr:nth-child(1) {
+	background-color:#1C8A43;
+	color:white;
+}
+
+#newcollectionstable tr td, #newcollectionstable tr th, #top10table tr td, #top10table tr th {
+	padding:10px;
+	text-align:center;
+	font-weight:normal;
+}
+
+.rank {
+	background-color:#1C8A43;
+	border-radius:50%;
+	color:white;
+	font-weight:bold;
+	font-size:1.5em;
+	height:50px;
+	width:50px;
+}
+
+/*=============================SETTINGS===========================*/
+.settings {
+	margin-top:20px;
+}
+.settings h3 {
+	padding:10px;
+}
+#settingsformtable tr td {
+	padding:10px;
+}
+#holidayform label, #holidayform input {
+	padding-left:10px;
+}
+#holidaytable {
+	margin-top:20px;
+}
+#holidaytable td, #holidaytable th {
+	font-size:1em;
+	font-family:'Open Sans', sans-serif;
+	text-align:left;
+}
+#holidaytable tr td {
+	color:black;
+}
+#holidaytable th {
+	background-color:#1C8A43;
+	color:white;
+	font-weight:normal;
+}
+
+/* Datatables custom CSS */
+
+.pagination li a, .pagination li a:hover, .pagination li a:active, .pagination li a:visited {
+    color:#1C8A43;
+}
+
+.pagination .active a, .pagination .active a:hover {
+    background-color:#1C8A43;
+    color:#ffffff;
+}
+
+
+

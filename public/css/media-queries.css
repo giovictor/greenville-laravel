@@ -1,0 +1,58 @@
+@media screen and (max-width:767px) {
+    #gvcnavbarcollapse {
+        padding:0;
+    }
+
+    #navbarright {
+        margin:0;
+    }
+
+    #navbarright .dropdown-items {
+        padding-left: 30px;
+    }
+
+    #navbarright .open a, #navbarright .open a:active {
+        background-color:#1C8A43;
+    }
+
+    #homepageslider .carousel-inner .item img {
+        height:100%;
+        width:100%;
+    }
+
+    #basicsearchbox,  .selectsearchtype {
+        width:100%;
+    }
+
+    #collectionssearchform {
+        margin-top:53px;
+    }
+
+    .collectionsearch {
+        height:100%;
+        padding: 10px 35px;
+    }
+
+    .collectionssearchbtn {
+        margin-top:20px;
+    }
+}
+
+
+@media screen and (max-width:480px) {
+    #gvcnavbar .navbar-brand {
+        font-size:16px;
+    }
+    .basicsearch {
+        padding:35px 25px;
+    }
+
+    .basicsearch h3 {
+        font-size:22px;
+    }
+
+    .collectionsearch h2 {
+        font-size:25px;
+    }
+}
+
