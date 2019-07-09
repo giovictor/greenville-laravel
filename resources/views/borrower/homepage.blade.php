@@ -26,4 +26,6 @@
 
 @include('../partials.basicsearch')
 
+@include('../partials.errors')
+
 @endsection

@@ -16,3 +16,4 @@ Route::get('/', function () {
 })->name('homepage');
 
 
+Route::get('search', 'SearchController@borrowerBookSearch')->name('borrowerBookSearch');
