@@ -14,6 +14,17 @@
 	<div class="collapse navbar-collapse" id="gvcnavbarcollapse">
 		<ul class="nav navbar-nav navbar-right" id="navbarright">
             <li><a href={{route('homepage')}}>HOME</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Classifications
+                    <div class="caret"></div>
+                </a>
+                <ul class="dropdown-menu">
+                    @foreach($classifications as $classification)
+                        <li><a href="#">{{$classification->classification}}</a></li>
+                    @endforeach
+                </ul>
+            </li>
             <li><a href="#" data-toggle="modal" data-target="#login">Login</a></li>
 		</ul>
 	</div>

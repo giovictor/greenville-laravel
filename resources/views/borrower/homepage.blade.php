@@ -1,24 +1,29 @@
 @extends('index')
+
 @section('content')
 
-<div class="basicsearch">
-    <h3>Greenville College Library</h3>
-    <h4>Search for library's materials and collections</h4>
-    <form method="GET" id="basicsearchform">
-        <div class="form-group">
-            <input id="basicsearchbox" type="text" name="q" class="form-control" size="50">
-        </div>
-        <div class="form-group">
-            Limit to: <select name="type" class="searchtype form-control">
-                <option value="booktitle">Title</option>
-                <option value="author">Author</option>
-                <option value="publisher">Publisher</option>
-                <option value="publishingyear">Year</option>
-                <option value="accession_no">Accession Number</option>
-            </select>
-        </div>
-        <button type="submit" id="button" class="btn btn-success btn-sm">Search</button>
-    </form>
+<div id="homepageslider" class="carousel slide" data-ride="carousel" data-interval="5000">
+	<ol class="carousel-indicators">
+		<li class="active" data-target="#homepageslider" data-slide-to="0"></li>
+		<li data-target="#homepageslider" data-slide-to="1"></li>
+		<li data-target="#homepageslider" data-slide-to="2"></li>
+		<li data-target="#homepageslider" data-slide-to="3"></li>
+		<li data-target="#homepageslider" data-slide-to="4"></li>
+		<li data-target="#homepageslider" data-slide-to="5"></li>
+		<li data-target="#homepageslider" data-slide-to="6"></li>
+	</ol>
+
+	<div class="carousel-inner">
+		<div class="item active"><img src={{asset('img/carousel1.jpg')}}></div>
+		<div class="item"><img src={{asset('img/carousel2.jpg')}}></div>
+		<div class="item"><img src={{asset('img/carousel3.jpg')}}></div>
+		<div class="item"><img src={{asset('img/carousel4.jpg')}}></div>
+		<div class="item"><img src={{asset('img/carousel5.jpg')}}></div>
+		<div class="item"><img src={{asset('img/carousel6.jpg')}}></div>
+		<div class="item"><img src={{asset('img/carousel7.jpg')}}></div>
+	</div>
 </div>
+
+@include('../partials.basicsearch')
 
 @endsection
