@@ -10,6 +10,15 @@
 	color:#1CA843;
 	text-decoration:underline;
 }
+
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus {
+    z-index: 3;
+    color: #fff;
+    background-color: #1CA843;
+    border-color: #1CA843;
+    cursor: default;
+}
+
 .map {
 	margin:30px;
 	width:400px;
@@ -51,9 +60,9 @@
 	background-color:#1C8A43;
 	border:#1C8A43;
 }
- #button:hover, .button:hover,  #checkresbutton:hover, #findbookbutton:hover, #addbutton:hover, #addclassification:hover, #addauthor:hover, #addpublisher:hover, #editclassification:hover, #editauthor:hover, #editpublishe:hover, #searchclassification:hover, #searchauthor:hover, #searchpublisher:hover, #archivedsearchclassification:hover, #archivedsearchauthor:hover, #archivedsearchpublisher:hover  {
- 	background-color:#419641;
- }
+#button:hover, .button:hover,  #checkresbutton:hover, #findbookbutton:hover, #addbutton:hover, #addclassification:hover, #addauthor:hover, #addpublisher:hover, #editclassification:hover, #editauthor:hover, #editpublishe:hover, #searchclassification:hover, #searchauthor:hover, #searchpublisher:hover, #archivedsearchclassification:hover, #archivedsearchauthor:hover, #archivedsearchpublisher:hover  {
+    background-color:#419641;
+}
 .glyphicon {
 	position:relative;
 	z-index:1;

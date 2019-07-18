@@ -4,11 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Book;
-class Classification extends Model
-{
-    protected $table = 'classification';
 
-    protected $primaryKey = 'classificationID';
+class Publisher extends Model
+{
+    protected $table = 'publisher';
+
+    protected $primaryKey = 'publisherID';
 
     public function books()
     {

@@ -21,7 +21,7 @@
                 </a>
                 <ul class="dropdown-menu">
                     @foreach($classifications as $classification)
-                        <li><a href="#">{{$classification->classification}}</a></li>
+                        <li><a href={{route('collections',['id'=>$classification->classificationID])}}>{{$classification->classification}}</a></li>
                     @endforeach
                 </ul>
             </li>

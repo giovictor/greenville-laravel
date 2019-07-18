@@ -16,4 +16,6 @@ Route::get('/', function () {
 })->name('homepage');
 
 
-Route::get('search', 'SearchController@borrowerBookSearch')->name('borrowerBookSearch');
+Route::get('search', 'SearchController@basicSearch')->name('basicSearch');
+Route::get('collections/{id}', 'SearchController@collections')->name('collections');
+Route::get('collections/search/{id}', 'SearchController@collectionsSearch')->name('collectionssearch');

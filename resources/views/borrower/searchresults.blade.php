@@ -20,9 +20,13 @@
             <tr>
                 <td>{{$book->accession_no}}</td>
                 <td>{{$book->booktitle}}</td>
-                <td>{{$book->authors}}</td>
-                <td>{{$book->publisher}} c{{$book->publishingyear}}</td>
-                <td>{{$book->classification}}</td>
+                <td>
+                    @foreach($book->authors as $authors)
+                        {{$authors->author}}
+                    @endforeach
+                </td>
+                <td>{{!empty($book->publisher) ? $book->publisher->publisher : ''}} c{{$book->publishingyear}}</td>
+                <td>{{$book->classification->classification}}</td>
             </tr>
         @endforeach
     </table>
