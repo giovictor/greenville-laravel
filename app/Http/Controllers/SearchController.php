@@ -3,61 +3,43 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\BorrowerBookSearchRequest;
+use App\Repositories\BookRepositoryInterface;
+use App\Repositories\ClassificationRepositoryInterface;
 use App\Book;
 use App\Classification;
-
 class SearchController extends Controller
 {
-    public function basicSearch(Request $request)
+    public $book;
+    public $classification;
+
+    public function __construct(BookRepositoryInterface $book, ClassificationRepositoryInterface $classification)
     {
-        $request->validate([
-            'q'=>'required',
-            'type'=>'required'
-        ]);
+        $this->book = $book;
+        $this->classification = $classification;
+    }
 
-        if(request('type')=='author') {
-            $results = Book::with('authors')->whereHas('authors', function($query) {
-                $query->where(request('type'), 'LIKE', '%'.request('q').'%');
-            })->paginate(10);
-        } else if(request('type')=='publisher') {
-            $results = Book::with('publisher')->whereHas('publisher', function($query) {
-                $query->where(request('type'), 'LIKE', '%'.request('q').'%');
-            })->paginate(10);
-        } else {
-            $results = Book::with('authors', 'classification', 'publisher')->where(request('type'), 'LIKE', '%'.request('q').'%')->paginate(10);
-        }
-
+    public function basicSearch(BorrowerBookSearchRequest $request)
+    {
+        $q = $request->validated()['q'];
+        $type = $request->validated()['type'];
+        $results = $this->book->basicSearch($q, $type);
         return view('borrower.searchresults', compact('results'));
     }
 
     public function collections($id)
     {
-        $classification = Classification::where('classificationID', '=' , $id)->first();
-        $collections = Book::with('authors','publisher')->where('classificationID','=', $id)->paginate(10);
+        $classification = $this->classification->getClassificationByID($id);
+        $collections = $this->book->getBooksByClassification($id);
         return view('borrower.collections', compact('classification','collections'));
     }
 
-    public function collectionsSearch(Request $request, $id)
+    public function collectionsSearch(BorrowerBookSearchRequest $request, $id)
     {
-        $classification = Classification::where('classificationID', '=' , $id)->first();
-
-        $request->validate([
-            'q'=>'required',
-            'type'=>'required'
-        ]);
-
-        if(request('type')=='author') {
-            $collections = Book::with('authors')->whereHas('authors', function($query) {
-                $query->where(request('type'), 'LIKE', '%'.request('q').'%');
-            })->where('classificationID','=',$id)->paginate(10);
-        } else if(request('type')=='publisher') {
-            $collections = Book::with('publisher')->whereHas('publisher', function($query) {
-                $query->where(request('type'), 'LIKE', '%'.request('q').'%');
-            })->where('classificationID','=',$id)->paginate(10);
-        } else {
-            $collections = Book::with('authors', 'classification', 'publisher')->where(request('type'), 'LIKE', '%'.request('q').'%')->where('classificationID','=',$id)->paginate(10);
-        }
-
+        $classification =  $this->classification->getClassificationByID($id);
+        $q = $request->validated()['q'];
+        $type = $request->validated()['type'];
+        $collections = $this->book->collectionsSearch($q, $type,$id);
         return view('borrower.collections', compact('classification','collections'));
     }
 
