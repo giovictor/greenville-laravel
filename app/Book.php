@@ -27,4 +27,13 @@ class Book extends Model
     {
         return $this->belongsTo(Publisher::class, 'publisherID');
     }
+
+    public function getTitleAttribute()
+    {
+        if(strlen($this->booktitle) > 35) {
+            return substr($this->booktitle,0, 35).'...';
+        } else {
+            return substr($this->booktitle,0, 35);
+        }
+    }
 }
