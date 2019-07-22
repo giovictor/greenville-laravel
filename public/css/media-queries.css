@@ -20,12 +20,8 @@
         width:100%;
     }
 
-    #basicsearchbox,  .selectsearchtype {
+    #basicsearchbox,  .searchtype, .collectionssearchbox {
         width:100%;
-    }
-
-    #collectionssearchform {
-        margin-top:53px;
     }
 
     .collectionsearch {
@@ -39,20 +35,30 @@
 }
 
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:481px) {
     #gvcnavbar .navbar-brand {
         font-size:16px;
+    }
+
+    #navbarright li a {
+        font-size:14px;
     }
     .basicsearch {
         padding:35px 25px;
     }
 
-    .basicsearch h3 {
-        font-size:22px;
-    }
-
     .collectionsearch h2 {
         font-size:25px;
     }
+
+    .basicsearch h3, .collectionsearch h2 {
+        font-size:18px;
+    }
+
+    .basicsearch h4, .collectionsearch h4 {
+        font-size:14px;
+    }
 }
+
+
 

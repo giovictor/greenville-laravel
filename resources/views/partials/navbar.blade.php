@@ -16,7 +16,7 @@
             <li><a href={{route('homepage')}}>HOME</a></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Classifications
+                    Collections
                     <div class="caret"></div>
                 </a>
                 <ul class="dropdown-menu">

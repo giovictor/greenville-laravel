@@ -7,7 +7,7 @@
     <h4>Search for Greenville College's {{$classification->classification}} collections</h4>
     <form action={{route('collectionssearch', ['id'=>$classification->classificationID])}} method="GET" class="form-inline" id="collectionssearchform">
         <div class="form-group">
-            Limit to: <select name="type" class="form-control selectsearchtype">
+            Limit to: <select name="type" class="form-control searchtype">
                 <option value="booktitle">Title</option>
                 <option value="author">Author</option>
                 <option value="publisher">Publisher</option>
@@ -16,7 +16,7 @@
         </div>
         <div class="form-group">
             <input class="form-control collectionssearchbox" type="text" name="q">
-            <button id="button" class="btn btn-success btn-sm" type="submit">Search</button>
+            <button id="button" class="btn btn-success btn-sm collectionssearchbtn" type="submit">Search</button>
         </div>
     </form>
 </div>

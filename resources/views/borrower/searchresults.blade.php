@@ -19,7 +19,7 @@
         @foreach($results as $book)
             <tr>
                 <td>{{$book->accession_no}}</td>
-                <td>{{$book->booktitle}}</td>
+                <td>{{$book->title}}</td>
                 <td>
                     @foreach($book->authors as $authors)
                         {{$authors->author}}

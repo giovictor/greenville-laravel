@@ -531,6 +531,7 @@ input[id=advancedsearchbutton] {
 input[id=resetbutton] {
 	background-color:#1C8A43;
 }
+
 .searchresults table {
 	margin-top:20px;
 	margin-bottom:20px;
@@ -550,6 +551,24 @@ input[id=resetbutton] {
 .searchresults th {
 	background-color:#1C8A43;
 }
+
+/* .searchresults {
+    display:flex;
+    flex-flow:row wrap;
+    align-items:center;
+}
+
+/* .bookresult {
+    background-color:#E8E6E6;
+    padding:5px;
+    margin:5px;
+    height:230px;
+}
+
+.bookresult p {
+    font-size:14px;
+} */
+
 .resultsbar {
 	margin-top:20px;
 	background-color:#E5FAD1;
