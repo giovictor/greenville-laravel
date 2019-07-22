@@ -28,4 +28,11 @@ class BorrowerBookSearchRequest extends FormRequest
             'type' => 'required'
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'q.required' => 'Must input a search keyword.'
+        ];
+    }
 }
