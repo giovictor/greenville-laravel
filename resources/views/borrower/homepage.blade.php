@@ -2,6 +2,9 @@
 
 @section('content')
 
+@if(Auth::check())
+    <p>Welcome, {{Auth::user()->name}}. You can now reserve a book for borrowing at our library. Search for a book now!</p>
+@else
 <div id="homepageslider" class="carousel slide" data-ride="carousel" data-interval="5000">
 	<ol class="carousel-indicators">
 		<li class="active" data-target="#homepageslider" data-slide-to="0"></li>
@@ -23,6 +26,7 @@
 		<div class="item"><img src={{asset('img/carousel7.jpg')}}></div>
 	</div>
 </div>
+@endif
 
 @include('../partials.basicsearch')
 

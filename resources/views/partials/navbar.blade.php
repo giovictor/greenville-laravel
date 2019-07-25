@@ -25,7 +25,21 @@
                     @endforeach
                 </ul>
             </li>
-            <li><a href="#" data-toggle="modal" data-target="#login">Login</a></li>
+            @if(Auth::check())
+                <li>
+                    <a href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                </li>
+            @else
+                <li><a href={{route('login')}}>Login</a></li>
+            @endif
 		</ul>
 	</div>
 </nav>

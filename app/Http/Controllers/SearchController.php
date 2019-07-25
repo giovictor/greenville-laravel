@@ -1,13 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
 use App\Http\Requests\BorrowerBookSearchRequest;
 use App\Repositories\BookRepositoryInterface;
 use App\Repositories\ClassificationRepositoryInterface;
-use App\Book;
-use App\Classification;
 class SearchController extends Controller
 {
     public $book;

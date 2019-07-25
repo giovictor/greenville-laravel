@@ -11,11 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('borrower.homepage');
-})->name('homepage');
-
+Route::get('/', 'HomeController@index')->name('homepage');
 
 Route::get('search', 'SearchController@basicSearch')->name('basicSearch');
 Route::get('collections/{id}', 'SearchController@collections')->name('collections');
 Route::get('collections/search/{id}', 'SearchController@collectionsSearch')->name('collectionssearch');
+
+
+Auth::routes();
+
